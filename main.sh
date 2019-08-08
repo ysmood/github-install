@@ -39,8 +39,11 @@ extract() {
 }
 
 select_url() {
-    if [ -z "$ver" ]
-    then
+    if [ -z "$bin" ]; then
+        bin=$(basename $repo)
+    fi
+
+    if [ -z "$ver" ]; then
         url=`$get https://api.github.com/repos/$repo/releases/latest | grep $bin-$os | grep /releases/download/ | cut -d '"' -f 4`
     else
         url="https://github.com/$repo/releases/download/$ver/$bin-$suffix"
