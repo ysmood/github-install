@@ -22,9 +22,9 @@ remove() {
 
 move() {
     if [ -w $(dirname $2) ]; then
-        ln $1 $2 
+        ln -f $1 $2 
     else
-        sudo ln $1 $2
+        sudo ln -f $1 $2
     fi
 
     remove $1
