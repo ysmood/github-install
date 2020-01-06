@@ -8,7 +8,7 @@ install() {
 
     extract $bin-$suffix
     remove $bin-$suffix
-    move $bin /usr/local/bin/
+    move $bin /usr/local/bin/$bin
     echo installed to /usr/local/bin/$bin
 }
 
