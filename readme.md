@@ -1,6 +1,6 @@
 # Github Install
 
-A script to help download and install github executable release.
+A script to help download and install github executable from the release page.
 
 ## Example
 
