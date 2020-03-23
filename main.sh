@@ -1,5 +1,7 @@
 #!/usr/bin/env sh
 
+set -e
+
 install() {
     echo "install into $os"
     echo downloading: $url
@@ -14,9 +16,9 @@ install() {
 
 remove() {
     if [ -w $(dirname $1) ]; then
-        rm $1
+        rm -f $1
     else
-        sudo rm $1
+        sudo rm -f $1
     fi
 }
 
