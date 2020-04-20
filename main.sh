@@ -53,12 +53,12 @@ select_url() {
 }
 
 select_downloader() {
-    if which wget > /dev/null; then
-        get="wget -O-"
-        download="wget"
-    else
+    if which curl > /dev/null; then
         get="curl -L"
         download="curl -JOL"
+    else
+        get="wget -O-"
+        download="wget"
     fi
 
     # if cwd is not writable prepend sudo
